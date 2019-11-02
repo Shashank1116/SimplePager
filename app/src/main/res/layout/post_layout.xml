@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+        android:layout_margin="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="550dp">
+    <TextView
+            android:id="@+id/post_name"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_below="@+id/post_name"
+            android:id="@+id/image"
+            android:layout_width="match_parent" android:layout_height="400dp"/>
+    <TextView
+            android:id="@+id/total_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="353"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/like_sign_small"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/image"/>
+    <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_below="@+id/total_likes"
+            android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/like_button"
+                android:text="Like"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+        />
+        <TextView
+                android:layout_weight="1"
+                android:id="@+id/comment_button"
+                android:layout_width="wrap_content"
+                android:text="Comment"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:layout_weight="1"
+                android:id="@+id/share_button"
+                android:layout_width="wrap_content"
+                android:text="Share"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+            android:layout_below="@id/buttons"
+            android:layout_width="match_parent" android:layout_height="20dp"
+          android:background="@android:color/darker_gray"/>
+
+</RelativeLayout>
+</layout>
